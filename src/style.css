@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Nunito';
+}
+body{
+    min-height: 900px;
+    background: rgb(0,117,72);
+    background: linear-gradient(194deg, rgba(0,117,72,1) 0%, rgba(14,170,118,1) 39%, rgba(0,255,183,1) 100%) no-repeat;
+}
+.container{
+    width: 450px;
+    height: 600px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 50px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+a{
+    text-decoration: none;
+}
+a.active-link{
+    position: relative;
+}
+a.active-link::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    background-color: rgb(255, 153, 29);
+    border-radius: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+}
+.top-links{
+    margin-bottom: 100px;
+}
+
+.container .top-links{
+    font-size: 24px;
+    display: flex;
+    column-gap: 50px;
+}
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.input-fields .input-fields__field{
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: none;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+.input-fields .input-fields__field:focus{
+    outline: none;
+}
+.input-fields input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+}
+.remember-checkbox-label{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons{
+    padding: 65px;
+}
+.button{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(255, 153, 29);
+    border: none;
+    padding: 10px 5px;
+    border-radius: 40px;
+    font-size: 24px;
+}
+button:hover{
+    cursor: pointer;
+}
+.login-button:hover{
+    background-color: rgb(210, 127, 25);
+}
+.login-button{
+    transition: ease 0.3s;
+}
+.forgot-button{
+    background-color: rgba(0, 0, 0, 0);
+    transition: ease 0.3s;
+}
+.forgot-button:hover{
+    color:rgba(255, 255, 255, 0.8);
+}
+
+.remember-checkbox{
+    appearance: none;
+}
+
+.custom-remember-checkbox{
+    content: '';
+    width: 16px;
+    display: inline-block;
+    height: 16px;
+    transform: translateY(1px);
+    background: url('../img/unchecked_checkbox.svg') no-repeat;
+}
+.remember-label:hover{
+    cursor: pointer;
+}
+.remember-checkbox:checked + .custom-remember-checkbox{
+    content: '';
+    width: 16px;
+    display: inline-block;
+    height: 16px;
+    transform: translateY(1px);
+    background: url('../img/checkbox_checked.svg') no-repeat;
+}
+
+input:-webkit-autofill {
+    background-color: rgba(0, 0, 0, 0);
+}
+.data{
+    display: block;
+    margin: 0 auto;
+    color: rgb(255, 255, 255, 0.7);
+    padding-left: 230px;
+    padding-right: 220px;
+}
